@@ -5,7 +5,9 @@
     "start": "node server.js",
     "test": "mocha spec",
     "start-dev": "webpack -w | nodemon server.js",
-    "start-prod": "webpack -p | nodemon server.js"
+    "start-prod": "webpack -p | nodemon server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bluebird": "^3.4.6",
@@ -29,7 +31,8 @@
     "react-dom": "^0.14.7",
     "request": "^2.75.0",
     "style-loader": "^0.13.1",
-    "xml2js": "^0.4.17"
+    "xml2js": "^0.4.17",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -49,5 +52,6 @@
   "bugs": {
     "url": "https://github.com/newtonian-platypus/greenCast/issues"
   },
-  "homepage": "https://github.com/newtonian-platypus/greenCast#readme"
+  "homepage": "https://github.com/newtonian-platypus/greenCast#readme",
+  "snyk": true
 }
